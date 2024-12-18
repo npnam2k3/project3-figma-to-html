@@ -1,0 +1,331 @@
+/* PC */
+@media (min-width: 992px) {
+  .mobile-header{
+    display: none;
+  }
+}
+
+/* tablet & mobile */
+@media (max-width: 991.98px) {
+  /* ẩn nav bar */
+  .navbar {
+    display: none;
+  }
+  /* căn giữa logo */
+  .header-top{
+    position: relative;
+  }
+  .header__logo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* can lai vi tri menu icon */
+  .menu-header__icon{
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+  }
+
+  /* overlay */
+  .menu-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  .menu-checkbox:checked ~ .menu-overlay{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-drawer{
+    position: fixed;
+    background-color: #DEAA79;
+    inset: 0 40% 0 0;
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  .menu-checkbox:checked ~ .menu-drawer{
+    transform: translateX(0);
+  }
+  .menu-drawer__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .close-icon{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  #navbar__list--mobile{
+    margin-top: 30px;
+  }
+  .navbar__link{
+    display: block;
+    color: #2a2222;
+  }
+  .navbar__link:hover{
+    background: #F8FAFC08;
+  }
+
+
+  /* hero */
+  .hero{
+    flex-direction: column-reverse;
+    row-gap: 50px;
+  }
+  .hero__content{
+    width: 80%;
+    text-align: center;
+  }
+  .hero__row{
+    justify-content: center;
+  }
+
+  /* service */
+  .service__row{
+    flex-direction: column;
+    gap: 30px;
+  }
+  .service__img{
+    width: 760px;
+  }
+  .service-item{
+    width: 90%;
+  }
+  .service-item__desc{
+    margin-top: 8px;
+  }
+  .service__list{
+    text-align: center;
+  }
+  .service-item{
+    text-align: start;
+    margin-top: 8px;
+  }
+  .service__btn{
+    margin-top: 55px;
+  }
+
+  /* work */
+  .work__list{
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  /* about */
+  .about__content{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .about__body{
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about__img--small{
+    display: none;
+  }
+  .about__img--large{
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 15px;
+  }
+  .about figure{
+    width: 100%;
+  }
+  .about__desc{
+    width: 100%;
+  }
+
+  /* our dentist */
+  .our-dentist__list{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+  .our-dentist-item__img{
+    margin: 0 auto;
+  }
+
+  /* install mobile */
+  .install__img{
+    display: none;
+  }
+  .install__content{
+    margin: 0 auto;
+  }
+
+  /* blogs */
+  .blog__body{
+    flex-direction: column-reverse;
+    row-gap: 30px;
+  }
+  .blog__content{
+    width: 90%;
+    text-align: center;
+  }
+  .blog__control{
+    justify-content: center;
+  }
+
+  /* appointment */
+  .appointment__body{
+    text-align: center;
+  }
+
+
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* footer */
+      .footer__top {
+        grid-template-columns: 0.5fr 0.5fr 1fr;
+        grid-template-areas:
+          "top top top"
+          "b1 b2 b3";
+        row-gap: 20px;
+      }
+    
+      .footer__column:first-child {
+        grid-area: top;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer__column:nth-child(2) {
+        grid-area: b1;
+      }
+    
+      .footer__column:nth-child(3) {
+        grid-area: b2;
+      }
+    
+      .footer__column:last-child {
+        grid-area: b3;
+      }
+}
+
+/* mobile */
+@media (max-width: 767.98px) {
+  /* header */
+  .header__action{
+    display: none;
+  }
+  .menu-header__icon{
+    top: 18px;
+  }
+  .navbar__item{
+    list-style-type: none;
+  }
+  .menu-drawer{
+    inset: 0 25% 0 0;
+    padding: 30px;
+  }
+  .navbar__link--active::before{
+    top: 18px;
+  }
+  .separate{
+    border-top: 1px solid #9d9d9d;
+  }
+
+  /* hero */
+  .hero__img--small{
+    display: none;
+  }
+  .hero__img--large{
+    width: 375px;
+    margin: 0 auto;
+  }
+  .hero__heading{
+    font-size: 3rem;
+  }
+  .hero__row{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  /* service */
+  .service{
+    padding: 115px 0;
+  }
+  .service__heading{
+    font-size: 3rem;
+  }
+  .section-desc{
+    width: 90%;
+  }
+  .service__img{
+    width: 100%;
+    height: auto;
+  }
+
+  /* work */
+  .section-heading{
+    font-size: 3rem;
+  }
+  .section-desc{
+    width: 100%;
+  }
+
+  /* our dentist */
+  .our-dentist__list{
+    grid-template-columns: 1fr;
+  }
+
+  /* install */
+  .install{
+    margin-top: 75px;
+  }
+  .install__desc{
+    font-size: 1.3rem;
+  }
+  .install__body{
+    padding: 0;
+  }
+  .install__content{
+    max-width: 250px;
+  }
+
+  /* blogs */
+  .blog__list{
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  /* appointment */
+  .appointment__body{
+    padding: 30px 10px;
+  }
+  .appointment__desc{
+    font-size: 1.7rem;
+  }
+
+  /* footer */
+  .footer__top{
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    text-align: center;
+  }
+  .footer-form{
+    margin-bottom: 25px;
+    justify-content: center;
+  }
+  .footer__socials{
+    justify-content: center;
+  }
+}
+

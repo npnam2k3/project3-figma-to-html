@@ -84,6 +84,7 @@
 
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -100,11 +101,14 @@
         <div class="header-top">
           <!-- logo -->
           <a href="#!"
-            ><img src="./assets/icons/logo.svg" alt="shine smile" class="logo"
+            ><img
+              src="./assets/icons/logo.svg"
+              alt="shine smile"
+              class="logo header__logo"
           /></a>
           <!-- nav -->
           <nav class="navbar">
-            <ul class="navbar__list">
+            <ul class="navbar__list" id="navbar__list--PC">
               <li class="navbar__item">
                 <a href="#!" class="navbar__link navbar__link--active">Home</a>
               </li>
@@ -157,6 +161,67 @@
         </section>
       </div>
     </header>
+
+    <!-- Tablet/mobile header -->
+    <div class="mobile-header">
+      <!-- tablet/mobile menu -->
+      <input type="checkbox" id="menu-checkbox" class="menu-checkbox" hidden />
+      <label for="menu-checkbox">
+        <svg
+          class="menu-header__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </label>
+      <label for="menu-checkbox" class="menu-overlay"></label>
+
+      <!-- menu-content -->
+      <div class="menu-drawer">
+        <div class="menu-drawer__top">
+          <!-- logo -->
+          <a href="#!"
+            ><img src="./assets/icons/logo.svg" alt="shine smile"
+          /></a>
+          <!-- icon close -->
+          <label for="menu-checkbox">
+            <svg
+              class="close-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <path
+                fill="currentColor"
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+              />
+            </svg>
+          </label>
+        </div>
+        <!-- nav mobile-->
+        <ul id="navbar__list--mobile"></ul>
+        <script>
+          const navPC = document.getElementById("navbar__list--PC");
+          const navMobile = document.getElementById("navbar__list--mobile");
+          navMobile.innerHTML = navPC.innerHTML;
+        </script>
+
+        <div class="separate"></div>
+        <!-- cta-group -->
+        <div class="cta-group-mobile">
+          <li class="navbar__item">
+            <a href="#!" class="navbar__link">Log in</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#!" class="navbar__link">Sign up</a>
+          </li>
+        </div>
+      </div>
+    </div>
+
     <!-- main -->
     <main>
       <!-- service -->
